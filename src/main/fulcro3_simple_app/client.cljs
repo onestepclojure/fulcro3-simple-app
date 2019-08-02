@@ -2,12 +2,16 @@
   (:require
     [com.fulcrologic.fulcro.application :as app]
     [com.fulcrologic.fulcro.components :as comp :refer [defsc]]
-    [com.fulcrologic.fulcro.dom :as dom]))
+    [com.fulcrologic.fulcro.dom :as dom]
+    ;; app code
+    [fulcro3-simple-app.components.fulcrologo :refer [ui-fulcrologo]]
+    ))
 
 (defonce app (app/fulcro-app))
 
 (defsc Root [this props]
-  (dom/div "TODO"))
+  (dom/div
+    (ui-fulcrologo)))
 
 (defn ^:export init
   "Shadow-cljs sets this up to be our entry-point function. See shadow-cljs.edn `:init-fn` in the modules of the main build."
